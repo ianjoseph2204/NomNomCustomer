@@ -1,0 +1,8 @@
+{
+  "name": "diginom",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "452c1d03"
+}
