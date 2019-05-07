@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Explore
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-card routerLink="/resto-list" routerDirection="forward">
+
+      <ion-img src="/assets/maps-long.jpg"></ion-img>
+
+      <ion-card-header>
+        <ion-card-title>Near Me</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p>Find restaurants near you!</p>
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-card routerLink="/resto-list" routerDirection="forward">
+
+      <ion-img src="/assets/RestoFood-long.jpg"></ion-img>
+
+      <ion-card-header>
+        <ion-card-title>Similar Tastes</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p>Discover new restaurants with a similar taste and feel to your favorite restaurants!</p>
+      </ion-card-content>
+  	</ion-card>
+</ion-content>

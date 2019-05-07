@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-card class="welcome-card" routerLink="/help" routerDirection="forward">
+
+      <ion-img src="/assets/shapes.svg"></ion-img>
+
+      <ion-card-header>
+      	<ion-card-subtitle>Getting Started</ion-card-subtitle>
+        <ion-card-title>Need Help?</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p>Follow a tour of the app and learn how to enhance your experience with NomNom</p>
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-card routerLink="/resto-list" routerDirection="forward">
+
+        <ion-img src="/assets/RestoInt.jpg"></ion-img>
+
+        <ion-card-header>
+            <ion-card-title>Find a Restaurant</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <p>Find a restaurant, take a seat, and order your meal now!</p>
+        </ion-card-content>
+
+    </ion-card>
+
+    <ion-card routerLink="/generate-qr" routerDirection="forward">
+
+      <ion-img src="/assets/WinTable.jpg"></ion-img>
+
+      <ion-card-header>
+        <ion-card-title>Get Seated</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p>Generate a QR code to confirm your table and begin your dining experience!</p>
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-list lines="none">
+
+      <ion-list-header>
+        <ion-label>Other Things to Do</ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-icon slot="start" color="medium" name="person-add"></ion-icon>
+        <ion-label>Find Friends</ion-label>
+      </ion-item>
+      
+      <ion-item>
+        <ion-icon slot="start" color="medium" name="help-circle-outline"></ion-icon>
+        <ion-label>About Us</ion-label>
+      </ion-item>
+
+    </ion-list>
+
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Generate QR Code</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div>
+        <ion-input style="background-color: gray" type="text" [(ngModel)]="encodText"></ion-input>
+
+        <ion-button block (click)="encode()"> Encode</ion-button>
+
+    </div>
+    <div>
+
+        <ion-button block (click)="scan()"> Scan</ion-button>
+
+        <div *ngIf="scannedData.text">
+            <label>Your Barcode is</label>
+            <br>
+            <span>{{scannedData.text}}</span>
+        </div>
+    </div>
+</ion-content>
