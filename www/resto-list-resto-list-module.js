@@ -58,7 +58,7 @@ var RestoListPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\r\n  <ion-toolbar>\r\n  \t<ion-buttons slot=\"start\">\r\n      <ion-menu-button autoHide=\"false\"></ion-menu-button>\r\n    </ion-buttons>\r\n    <ion-title>\r\n    \tRestaurants\r\n\t</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content padding>\r\n\t<ion-list lines=\"full\">\r\n\r\n  \t\t\t<ion-item routerLink=\"/resto1\" routerDirection=\"forward\" detail>\r\n       \t\t\t<ion-label>resto1</ion-label>\r\n      \t\t</ion-item>\r\n\r\n      \t\t<ion-item routerLink=\"/resto1\" routerDirection=\"forward\" detail>\r\n       \t\t\t<ion-label>resto2</ion-label>\r\n      \t\t</ion-item>\r\n\r\n  \t\t</ion-list>\r\n</ion-content>\r\n"
+module.exports = "<ion-header>\r\n    <ion-toolbar>\r\n  \t    <ion-title *ngIf=\"!isSearchbarOpened\">\r\n    \t    Restaurants\r\n\t    </ion-title>\r\n        \r\n        <ion-buttons slot=\"end\">\r\n            <button ion-button icon-only *ngIf=\"!isSearchbarOpened\" (click)=\"isSearchbarOpened=true\">\r\n                <ion-icon name=\"search\"></ion-icon>\r\n            </button>\r\n        </ion-buttons>\r\n\r\n        <ion-searchbar *ngIf=\"isSearchbarOpened\" showCancelButton=\"true\"\r\n                       (search)=\"onSearch($event)\"\r\n                       (ionCancel)=\"isSearchbarOpened=false\"> </ion-searchbar>\r\n\r\n    </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content padding>\r\n\t\r\n    <ion-list lines=\"full\">\r\n        <ion-item *ngFor=\"let item of items\" routerLink=\"/restaurant\" routerDirection=\"forward\" detail>\r\n                <ion-label>{{item.title}}</ion-label>\r\n        </ion-item>\r\n  \t</ion-list>\r\n</ion-content>\r\n"
 
 /***/ }),
 
@@ -89,12 +89,21 @@ __webpack_require__.r(__webpack_exports__);
 
 var RestoListPage = /** @class */ (function () {
     function RestoListPage() {
+        this.isSearchbarOpened = false;
+        this.items = [
+            { title: 'Resto 1', id: 1 },
+            { title: 'Resto 2', id: 2 },
+            { title: 'Resto 3', id: 3 },
+        ];
     }
+    RestoListPage.prototype.onSearch = function (event) {
+        console.log(event.target.value);
+    };
     RestoListPage.prototype.ngOnInit = function () {
     };
     RestoListPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-resto-list',
+            selector: 'app-restoList',
             template: __webpack_require__(/*! ./resto-list.page.html */ "./src/app/resto-list/resto-list.page.html"),
             styles: [__webpack_require__(/*! ./resto-list.page.scss */ "./src/app/resto-list/resto-list.page.scss")]
         }),

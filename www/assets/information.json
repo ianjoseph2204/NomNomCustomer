@@ -1,0 +1,71 @@
+{
+    "menuList":[
+        {
+            "meal_type":1,
+            "children":[
+                {
+                    "meal_id":1,
+                    "meal_name":"Pepperoni Pizza",
+                    "prep_time":"00:15:00",
+                    "description":"Featuring our traditional crispy crust, is topped with a blend of mozzarella and cheddar cheese, zesty pepperoni slices and a rich tomato sauce",
+                    "price":50000,
+                    "status_id":1},
+                {   
+                    "meal_id":2,
+                    "meal_name":"Super Supreme",
+                    "prep_time":"00:20:00",
+                    "description":"What's on a supreme pizza? Besides the standard sauce and shredded mozzarella cheese, a supreme pizza usually has on it: sliced pepperoni. cooked, Italian sausage.",
+                    "price":60000,
+                    "status_id":1},
+                {
+                    "meal_id":3,
+                    "meal_name":"American Favorite",
+                    "prep_time":"00:20:00",
+                    "description":"With chicken luncheon, bacon, beef & beef burgers, mushrooms, pineapple, red & green peppers, mozzarella cheese and special PHD sauce.",
+                    "price":65000,
+                    "status_id":1
+                }
+            ]
+        },
+        {
+            "meal_type":2,
+            "children":[
+                { 
+                    "meal_id":4,
+                    "meal_name":"Pepperoni Cheese Fusilli",
+                    "prep_time":"00:15:00",
+                    "description":"Fusilli dengan saus keju cheddar, pepperoni dan peterseli.",
+                    "price":55000,"status_id":1},
+                {
+                    "meal_id":5,
+                    "meal_name":"Beef Lasagna",
+                    "prep_time":"00:15:00",
+                    "description":"Kombinasi pasta dengan daging cincang, krim pasta, keju mozzarella dan peterseli.",
+                    "price":45000,
+                    "status_id":1
+                }
+            ]
+        },
+        {
+            "meal_type":3,
+            "children":[
+                {
+                    "meal_id":6,
+                    "meal_name":"Melon Lemonade",
+                    "prep_time":"00:05:00",
+                    "description":"Melon flavoured drink with basil seeds and melon jelly.",
+                    "price":12000,
+                    "status_id":1
+                },
+                {
+                    "meal_id":7,
+                    "meal_name":"Sea Salt Caramel",
+                    "prep_time":"00:05:00",
+                    "description":"Sea salt caramel flavoured drink.",
+                    "price":18000,
+                    "status_id":1
+                }
+            ]
+        }
+    ]
+}

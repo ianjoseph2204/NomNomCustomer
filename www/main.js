@@ -865,13 +865,13 @@ var map = {
 		"./src/app/profile/profile.module.ts",
 		"profile-profile-module"
 	],
+	"./restaurant/restaurant.module": [
+		"./src/app/restaurant/restaurant.module.ts",
+		"restaurant-restaurant-module"
+	],
 	"./resto-list/resto-list.module": [
 		"./src/app/resto-list/resto-list.module.ts",
 		"resto-list-resto-list-module"
-	],
-	"./resto1/resto1.module": [
-		"./src/app/resto1/resto1.module.ts",
-		"resto1-resto1-module"
 	],
 	"./tabs/tabs.module": [
 		"./src/app/tabs/tabs.module.ts",
@@ -920,10 +920,10 @@ var routes = [
     { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
     { path: 'generate-qr', loadChildren: './generate-qr/generate-qr.module#GenerateQrPageModule' },
     { path: 'resto-list', loadChildren: './resto-list/resto-list.module#RestoListPageModule' },
-    { path: 'resto1', loadChildren: './resto1/resto1.module#Resto1PageModule' },
     { path: 'help', loadChildren: './help/help.module#HelpPageModule' },
     { path: 'about-us', loadChildren: './about-us/about-us.module#AboutUsPageModule' },
-    { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' }
+    { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' },
+    { path: 'restaurant', loadChildren: './restaurant/restaurant.module#RestaurantPageModule' }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -1097,6 +1097,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ionic-native/barcode-scanner/ngx */ "./node_modules/@ionic-native/barcode-scanner/ngx/index.js");
 /* harmony import */ var _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ionic-native/camera/ngx */ "./node_modules/@ionic-native/camera/ngx/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 
 
 
@@ -1107,6 +1108,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //added
+
 
 
 
@@ -1121,7 +1123,8 @@ var AppModule = /** @class */ (function () {
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
                 _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(),
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"]
+                _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_12__["HttpClientModule"]
             ],
             providers: [
                 _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
@@ -1201,7 +1204,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! E:\Users\Ian Joseph\Ionic\NomNom\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! E:\Users\Ian Joseph\Ionic\NomNomCustomer\src\main.ts */"./src/main.ts");
 
 
 /***/ })

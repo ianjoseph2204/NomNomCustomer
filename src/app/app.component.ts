@@ -6,7 +6,6 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 //added for barcode
 import { BarcodeScanner, BarcodeScannerOptions } from '@ionic-native/barcode-scanner/ngx';
-import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
 //added for hw back button
 /*

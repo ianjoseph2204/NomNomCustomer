@@ -63,7 +63,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"common":"common","about-us-about-us-module":"about-us-about-us-module","generate-qr-generate-qr-module":"generate-qr-generate-qr-module","help-help-module":"help-help-module","profile-profile-module":"profile-profile-module","resto-list-resto-list-module":"resto-list-resto-list-module","resto1-resto1-module":"resto1-resto1-module","tab1-tab1-module":"tab1-tab1-module","tab2-tab2-module":"tab2-tab2-module","tab3-tab3-module":"tab3-tab3-module","tabs-tabs-module":"tabs-tabs-module"}[chunkId]||chunkId) + ".js"
+/******/ 		return __webpack_require__.p + "" + ({"common":"common","about-us-about-us-module":"about-us-about-us-module","generate-qr-generate-qr-module":"generate-qr-generate-qr-module","help-help-module":"help-help-module","profile-profile-module":"profile-profile-module","restaurant-restaurant-module":"restaurant-restaurant-module","resto-list-resto-list-module":"resto-list-resto-list-module","tab1-tab1-module":"tab1-tab1-module","tab2-tab2-module":"tab2-tab2-module","tab3-tab3-module":"tab3-tab3-module","tabs-tabs-module":"tabs-tabs-module"}[chunkId]||chunkId) + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
