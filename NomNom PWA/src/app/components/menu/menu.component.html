@@ -1,0 +1,12 @@
+<ion-item class="menu-item" text-wrap detail="false" lines="none">
+  <ion-row no-padding align-items-center>
+      <ion-row no-padding>
+          <h3>{{ menu.meal_name }}</h3>
+          <p text-lowercase text-justify color="medium">{{ menu.description }}</p>
+      </ion-row>
+
+      <ion-row no-padding>
+        <ion-button fill="outline" (click)="orderMenu(menu)">{{ menu.price | currency:'IDR ':'symbol'}}</ion-button>
+      </ion-row>
+  </ion-row>
+</ion-item>

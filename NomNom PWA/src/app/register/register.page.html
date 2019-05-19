@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+    	<div class="ion-text-center">
+        	Register A New Account
+    	</div>
+  	</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  padding>
+	<ion-item>
+		<ion-label position="floating">Username</ion-label>
+		<ion-input name="username" [(ngModel)]="username"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label position="floating">Password</ion-label>
+		<ion-input name="password" type="password" [(ngModel)]="password"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label position="floating">Nama Lengkap</ion-label>
+		<ion-input name="nama" [(ngModel)]="nama"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label position="floating">Email</ion-label>
+		<ion-input name="email" type="email" [(ngModel)]="email"></ion-input>
+	</ion-item>	
+	<ion-item>
+		<ion-label position="floating">Nomor Telepon</ion-label>
+		<ion-input name="tel" [(ngModel)]="tel"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label position="floating">Alamat</ion-label>
+		<ion-input name="alamat" [(ngModel)]="alamat"></ion-input>
+	</ion-item>	   
+	<div class="ion-text-center">
+		<ion-button (click)="regButton()" shape="round"> Register</ion-button>  
+	</div>
+</ion-content>

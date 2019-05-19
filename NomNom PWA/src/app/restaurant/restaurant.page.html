@@ -1,0 +1,70 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button autoHide="false"></ion-menu-button>
+		</ion-buttons>
+		<ion-title>
+			Restaurant
+		</ion-title>
+
+		<ion-buttons slot="end">
+			<ion-button (click)="openCart()">
+				<ion-badge *ngIf="cart.length > 0">{{ cart.length }}</ion-badge>
+				<ion-icon slot="icon-only" name="cart"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+
+	</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-grid>
+		<ion-row>
+			<ion-col>
+				<ion-img src="https://ak7.picdn.net/shutterstock/videos/7478347/thumb/1.jpg"></ion-img>
+			</ion-col>
+			<ion-col>
+				<ion-row>
+					<ion-label>Restaurant</ion-label>
+				</ion-row>
+				<ion-row>
+					<ion-label>Open 10 a.m. - 10 p.m.</ion-label>
+				</ion-row>
+				<ion-row>
+					<ion-label>Italian Food</ion-label>
+				</ion-row>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<p>
+				This restaurant is a prototype, but it supposedly sells the usual Italian cuisine staples. Eat delicious pizza
+				and other Italian dishes at 23rd I. Made This Up Avenue!
+			</p>
+		</ion-row>
+		<ion-row>
+			<ion-button slot="end">
+				<ion-button (click)="automaticClose = !automaticClose">
+					<ion-icon slot="icon-only" name="close" *ngIf="automaticClose"></ion-icon>
+					<ion-icon slot="icon-only" name="resize" *ngIf="automaticClose"></ion-icon>
+				</ion-button>
+			</ion-button>
+		</ion-row>
+
+
+		<ion-list *ngFor="let meal_type of menu_list; let i = index;" class="accordion-list" lines="none" detail="false"
+			no-padding>
+			<ion-item tappable (click)="toggleSection(i)"
+				[ngClass]="{'section-active': meal_type.open , 'section': !meal_type.open}">
+				<ion-icon slot="start" name="arrow-forward" *ngIf="!meal_type.open"></ion-icon>
+				<ion-icon slot="start" name="arrow-down" *ngIf="meal_type.open"></ion-icon>
+				<ion-label>
+					{{meal_type.type_name}}
+				</ion-label>
+			</ion-item>
+
+			<ion-list *ngIf="meal_type.children && meal_type.open" class="menu-list" lines="none">
+				<app-menu [menu]="menu" *ngFor="let menu of meal_type.children"></app-menu>
+			</ion-list>
+		</ion-list>
+	</ion-grid>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>My Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of selectedItems">
+      <ion-col>
+
+        <ion-row no-padding>
+          <h2>{{ item.meal_name }}</h2>
+        </ion-row>
+
+        <ion-item>
+          {{ item.count }} x {{ item.price | currency:'IDR ':'symbol' }}
+          <span slot="end">{{ (item.price * item.count) | currency:'IDR ':'symbol' }}</span>
+        </ion-item>
+
+      </ion-col>
+    </ion-item>
+    <ion-item>
+      Total: <span slot="end">{{ total | currency:'IDR ':'symbol' }}</span>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer no-border>
+  <ion-button expand="full">
+    ORDER
+  </ion-button>
+</ion-footer>
