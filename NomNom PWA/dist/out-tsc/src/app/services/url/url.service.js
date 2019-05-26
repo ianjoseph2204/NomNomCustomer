@@ -15,7 +15,7 @@ var UrlService = /** @class */ (function () {
     UrlService.getRegUrl = function () {
         return this.url + 'registerCustomer.php';
     };
-    UrlService.url = 'http://192.168.43.231:8080/NomNom_Query/';
+    UrlService.url = 'http://192.168.1.100/NomNom_Query/';
     UrlService = tslib_1.__decorate([
         Injectable({
             providedIn: 'root'
